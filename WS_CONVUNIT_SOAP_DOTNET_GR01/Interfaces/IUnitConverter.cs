@@ -1,4 +1,4 @@
-namespace Server.Interfaces;
+namespace WebServer.Interfaces;
 
 public interface IUnitConverter<T> where T : struct
 {

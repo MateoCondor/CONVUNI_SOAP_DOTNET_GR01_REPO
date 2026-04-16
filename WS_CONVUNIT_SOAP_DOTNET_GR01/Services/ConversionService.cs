@@ -1,8 +1,8 @@
-using Server.Enums;
-using Server.Interfaces;
-using Server.Models.Dto;
+using WebServer.Enums;
+using WebServer.Interfaces;
+using WebServer.Models.Dto;
 
-namespace Server.Services;
+namespace WebServer.Services;
 
 public class ConversionService : IConversionService
 {

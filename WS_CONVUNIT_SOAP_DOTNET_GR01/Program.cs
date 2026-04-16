@@ -1,9 +1,9 @@
 using CoreWCF;
 using CoreWCF.Configuration;
-using Server.Enums;
-using Server.Interfaces;
-using Server.Models;
-using Server.Services;
+using WebServer.Enums;
+using WebServer.Interfaces;
+using WebServer.Models;
+using WebServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

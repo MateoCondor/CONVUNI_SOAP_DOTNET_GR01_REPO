@@ -1,12 +1,12 @@
 using System.Runtime.Serialization;
 
-namespace Server.Models.Dto;
+namespace WebServer.Models.Dto;
 
 [DataContract]
-public class LoginResponse
+public class ConversionResponse
 {
     [DataMember]
-    public bool IsAuth { get; set; }
+    public double Result { get; set; }
 
     [DataMember]
     public required string Message { get; set; }

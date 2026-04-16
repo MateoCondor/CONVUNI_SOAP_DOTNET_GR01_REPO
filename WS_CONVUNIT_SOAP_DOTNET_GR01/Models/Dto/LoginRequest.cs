@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace Server.Models.Dto;
+namespace WebServer.Models.Dto;
 
 [DataContract]
 public class LoginRequest

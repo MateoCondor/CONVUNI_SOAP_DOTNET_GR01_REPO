@@ -1,7 +1,7 @@
-using Server.Interfaces;
-using Server.Models.Dto;
+using WebServer.Interfaces;
+using WebServer.Models.Dto;
 
-namespace Server.Services;
+namespace WebServer.Services;
 
 public class AuthService : IAuthService
 {

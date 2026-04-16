@@ -1,7 +1,7 @@
-using Server.Enums;
-using Server.Interfaces;
+using WebServer.Enums;
+using WebServer.Interfaces;
 
-namespace Server.Models;
+namespace WebServer.Models;
 
 public class TemperatureConverter : IUnitConverter<TemperatureUnit>
 {

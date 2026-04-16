@@ -1,7 +1,7 @@
 using CoreWCF;
-using Server.Models.Dto;
+using WebServer.Models.Dto;
 
-namespace Server.Interfaces;
+namespace WebServer.Interfaces;
 
 [ServiceContract]
 public interface IConversionService

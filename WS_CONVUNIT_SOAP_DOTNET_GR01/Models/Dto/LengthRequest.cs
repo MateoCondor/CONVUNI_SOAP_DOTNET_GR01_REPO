@@ -1,7 +1,7 @@
 using System.Runtime.Serialization;
-using Server.Enums;
+using WebServer.Enums;
 
-namespace Server.Models.Dto;
+namespace WebServer.Models.Dto;
 
 [DataContract]
 public class LengthRequest

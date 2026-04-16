@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace Server.Enums;
+namespace WebServer.Enums;
 
 [DataContract]
 public enum MassUnit
