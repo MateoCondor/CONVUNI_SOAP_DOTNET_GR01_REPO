@@ -10,4 +10,5 @@ public enum MassUnit
     [EnumMember(Value = "kg")] Kilograms,
     [EnumMember(Value = "lb")] Pounds,
     [EnumMember(Value = "oz")] Ounces,
+    [EnumMember(Value = "t")] Tons
 }

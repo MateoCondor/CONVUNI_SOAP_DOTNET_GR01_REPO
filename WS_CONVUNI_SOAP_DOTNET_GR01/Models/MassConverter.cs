@@ -3,18 +3,19 @@ using WebServer.Interfaces;
 
 namespace WebServer.Models;
 
-public class LengthConverter : IUnitConverter<LengthUnit>
+public class MassConverter : IUnitConverter<MassUnit>
 {
-    private static readonly Dictionary<LengthUnit, double> Factors = new()
+    private static readonly Dictionary<MassUnit, double> Factors = new()
     {
-        [LengthUnit.Millimeters] = 0.001,
-        [LengthUnit.Centimeters] = 0.01,
-        [LengthUnit.Meters] = 1.0,
-        [LengthUnit.Kilometers] = 1000.0,
-        [LengthUnit.Feet] = 0.3048
+        [MassUnit.Milligrams] = 0.001,
+        [MassUnit.Grams] = 1.0,
+        [MassUnit.Kilograms] = 1000.0,
+        [MassUnit.Pounds] = 453.592,
+        [MassUnit.Ounces] = 28.3495,
+        [MassUnit.Tons] = 1000000.0
     };
 
-    public double Convert(LengthUnit from, LengthUnit to, double value)
+    public double Convert(MassUnit from, MassUnit to, double value)
     {
         if (value < 0) throw new ArgumentException("El valor debe ser 0 o positivo");
 

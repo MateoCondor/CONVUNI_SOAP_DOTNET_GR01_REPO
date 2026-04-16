@@ -37,7 +37,7 @@ public class ConversionService : IConversionService
         return new ConversionResponse()
         {
             Message = message,
-            Result = Math.Round(result, 2)
+            Result = Math.Round(result, 8)
         };
     }
 
