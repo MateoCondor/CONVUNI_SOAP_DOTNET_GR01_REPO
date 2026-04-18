@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConnectedServices.Auth
+namespace AuthClient
 {
     using System.Runtime.Serialization;
     
@@ -87,22 +87,22 @@ namespace ConnectedServices.Auth
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ConnectedServices.Auth.IAuthService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AuthClient.IAuthService")]
     public interface IAuthService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthService/Login", ReplyAction="http://tempuri.org/IAuthService/LoginResponse")]
-        System.Threading.Tasks.Task<ConnectedServices.Auth.LoginResponse> LoginAsync(ConnectedServices.Auth.LoginRequest dto);
+        System.Threading.Tasks.Task<AuthClient.LoginResponse> LoginAsync(AuthClient.LoginRequest dto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public interface IAuthServiceChannel : ConnectedServices.Auth.IAuthService, System.ServiceModel.IClientChannel
+    public interface IAuthServiceChannel : AuthClient.IAuthService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public partial class AuthServiceClient : System.ServiceModel.ClientBase<ConnectedServices.Auth.IAuthService>, ConnectedServices.Auth.IAuthService
+    public partial class AuthServiceClient : System.ServiceModel.ClientBase<AuthClient.IAuthService>, AuthClient.IAuthService
     {
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace ConnectedServices.Auth
         {
         }
         
-        public System.Threading.Tasks.Task<ConnectedServices.Auth.LoginResponse> LoginAsync(ConnectedServices.Auth.LoginRequest dto)
+        public System.Threading.Tasks.Task<AuthClient.LoginResponse> LoginAsync(AuthClient.LoginRequest dto)
         {
             return base.Channel.LoginAsync(dto);
         }
@@ -180,7 +180,7 @@ namespace ConnectedServices.Auth
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IAuthService))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:5119/AuthService");
+                return new System.ServiceModel.EndpointAddress("http://localhost:5119/Auth");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

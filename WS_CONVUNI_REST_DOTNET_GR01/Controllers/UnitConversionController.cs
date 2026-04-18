@@ -8,9 +8,9 @@ using WS_CONVUNI_REST_DOTNET_GR01.Services;
 [Route("api/[controller]")]
 public class UnitConversionController : ControllerBase
 {
-    private readonly ConversionService service;
+    private readonly UnitConversionService service;
 
-    public UnitConversionController(ConversionService service)
+    public UnitConversionController(UnitConversionService service)
     {
         this.service = service;
     }

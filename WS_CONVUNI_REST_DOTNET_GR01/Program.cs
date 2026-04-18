@@ -5,10 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-builder.Services.AddScoped<ConnectedServices.UnitConversion.ConversionServiceClient>();
-builder.Services.AddScoped<ConversionService>();
+builder.Services.AddScoped<UnitConversionClient.UnitConversionServiceClient>();
+builder.Services.AddScoped<UnitConversionService>();
 
-builder.Services.AddScoped<ConnectedServices.Auth.AuthServiceClient>();
+builder.Services.AddScoped<AuthClient.AuthServiceClient>();
 builder.Services.AddScoped<AuthService>();
 
 var app = builder.Build();

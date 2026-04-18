@@ -4,13 +4,13 @@ using WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto;
 
 namespace WS_CONVUNI_SOAP_DOTNET_GR01.Services;
 
-public class ConversionService : IConversionService
+public class UnitConversionService : IUnitConversionService
 {
     private readonly IUnitConverter<MassUnit> _massConverter;
     private readonly IUnitConverter<LengthUnit> _lengthConverter;
     private readonly IUnitConverter<TemperatureUnit> _temperatureConverter;
 
-    public ConversionService(
+    public UnitConversionService(
         IUnitConverter<MassUnit> massConverter,
         IUnitConverter<LengthUnit> lengthConverter,
         IUnitConverter<TemperatureUnit> temperatureConverter)
@@ -20,7 +20,7 @@ public class ConversionService : IConversionService
         _temperatureConverter = temperatureConverter;
     }
 
-    private static ConversionResponse Convert<T>(T from, T to, double value, IUnitConverter<T> converter) where T : struct
+    private static UnitConversionResponse Convert<T>(T from, T to, double value, IUnitConverter<T> converter) where T : struct
     {
         string message = "OK";
         double result = 0;
@@ -34,24 +34,24 @@ public class ConversionService : IConversionService
             message = e.Message;
         }
 
-        return new ConversionResponse()
+        return new UnitConversionResponse()
         {
             Message = message,
             Result = Math.Round(result, 8)
         };
     }
 
-    public ConversionResponse ConvertLength(LengthRequest dto)
+    public UnitConversionResponse ConvertLength(LengthRequest dto)
     {
         return Convert(dto.From, dto.To, dto.Value, _lengthConverter);
     }
 
-    public ConversionResponse ConvertMass(MassRequest dto)
+    public UnitConversionResponse ConvertMass(MassRequest dto)
     {
         return Convert(dto.From, dto.To, dto.Value, _massConverter);
     }
 
-    public ConversionResponse ConvertTemperature(TemperatureRequest dto)
+    public UnitConversionResponse ConvertTemperature(TemperatureRequest dto)
     {
         return Convert(dto.From, dto.To, dto.Value, _temperatureConverter);
     }

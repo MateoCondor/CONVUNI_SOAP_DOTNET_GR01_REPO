@@ -14,18 +14,18 @@ builder.Services.AddSingleton<IUnitConverter<TemperatureUnit>, TemperatureConver
 builder.Services.AddServiceModelServices();
 builder.Services.AddServiceModelMetadata();
 
-builder.Services.AddSingleton<ConversionService>();
+builder.Services.AddSingleton<UnitConversionService>();
 builder.Services.AddSingleton<AuthService>();
 
 var app = builder.Build();
 
 app.UseServiceModel(serviceBuilder =>
 {
-    serviceBuilder.AddService<ConversionService>();
-    serviceBuilder.AddServiceEndpoint<ConversionService, IConversionService>(new BasicHttpBinding(), "/UnitConversionService");
+    serviceBuilder.AddService<UnitConversionService>();
+    serviceBuilder.AddServiceEndpoint<UnitConversionService, IUnitConversionService>(new BasicHttpBinding(), "/UnitConversion");
 
     serviceBuilder.AddService<AuthService>();
-    serviceBuilder.AddServiceEndpoint<AuthService, IAuthService>(new BasicHttpBinding(), "/AuthService");
+    serviceBuilder.AddServiceEndpoint<AuthService, IAuthService>(new BasicHttpBinding(), "/Auth");
 
     var serviceMetadataBehavior = app.Services.GetRequiredService<CoreWCF.Description.ServiceMetadataBehavior>();
     serviceMetadataBehavior.HttpGetEnabled = true;

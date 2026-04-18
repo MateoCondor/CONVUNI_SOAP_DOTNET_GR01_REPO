@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConnectedServices.UnitConversion
+namespace UnitConversionClient
 {
     using System.Runtime.Serialization;
     
@@ -18,14 +18,14 @@ namespace ConnectedServices.UnitConversion
     public partial class MassRequest : object
     {
         
-        private ConnectedServices.UnitConversion.MassUnit FromField;
+        private UnitConversionClient.MassUnit FromField;
         
-        private ConnectedServices.UnitConversion.MassUnit ToField;
+        private UnitConversionClient.MassUnit ToField;
         
         private double ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.MassUnit From
+        public UnitConversionClient.MassUnit From
         {
             get
             {
@@ -38,7 +38,7 @@ namespace ConnectedServices.UnitConversion
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.MassUnit To
+        public UnitConversionClient.MassUnit To
         {
             get
             {
@@ -90,8 +90,8 @@ namespace ConnectedServices.UnitConversion
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ConversionResponse", Namespace="http://schemas.datacontract.org/2004/07/WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto")]
-    public partial class ConversionResponse : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="UnitConversionResponse", Namespace="http://schemas.datacontract.org/2004/07/WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto")]
+    public partial class UnitConversionResponse : object
     {
         
         private string MessageField;
@@ -131,14 +131,14 @@ namespace ConnectedServices.UnitConversion
     public partial class LengthRequest : object
     {
         
-        private ConnectedServices.UnitConversion.LengthUnit FromField;
+        private UnitConversionClient.LengthUnit FromField;
         
-        private ConnectedServices.UnitConversion.LengthUnit ToField;
+        private UnitConversionClient.LengthUnit ToField;
         
         private double ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.LengthUnit From
+        public UnitConversionClient.LengthUnit From
         {
             get
             {
@@ -151,7 +151,7 @@ namespace ConnectedServices.UnitConversion
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.LengthUnit To
+        public UnitConversionClient.LengthUnit To
         {
             get
             {
@@ -213,14 +213,14 @@ namespace ConnectedServices.UnitConversion
     public partial class TemperatureRequest : object
     {
         
-        private ConnectedServices.UnitConversion.TemperatureUnit FromField;
+        private UnitConversionClient.TemperatureUnit FromField;
         
-        private ConnectedServices.UnitConversion.TemperatureUnit ToField;
+        private UnitConversionClient.TemperatureUnit ToField;
         
         private double ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.TemperatureUnit From
+        public UnitConversionClient.TemperatureUnit From
         {
             get
             {
@@ -233,7 +233,7 @@ namespace ConnectedServices.UnitConversion
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ConnectedServices.UnitConversion.TemperatureUnit To
+        public UnitConversionClient.TemperatureUnit To
         {
             get
             {
@@ -281,28 +281,28 @@ namespace ConnectedServices.UnitConversion
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ConnectedServices.UnitConversion.IConversionService")]
-    public interface IConversionService
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UnitConversionClient.IUnitConversionService")]
+    public interface IUnitConversionService
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConversionService/ConvertMass", ReplyAction="http://tempuri.org/IConversionService/ConvertMassResponse")]
-        System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertMassAsync(ConnectedServices.UnitConversion.MassRequest dto);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUnitConversionService/ConvertMass", ReplyAction="http://tempuri.org/IUnitConversionService/ConvertMassResponse")]
+        System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertMassAsync(UnitConversionClient.MassRequest dto);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConversionService/ConvertLength", ReplyAction="http://tempuri.org/IConversionService/ConvertLengthResponse")]
-        System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertLengthAsync(ConnectedServices.UnitConversion.LengthRequest dto);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUnitConversionService/ConvertLength", ReplyAction="http://tempuri.org/IUnitConversionService/ConvertLengthResponse")]
+        System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertLengthAsync(UnitConversionClient.LengthRequest dto);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IConversionService/ConvertTemperature", ReplyAction="http://tempuri.org/IConversionService/ConvertTemperatureResponse")]
-        System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertTemperatureAsync(ConnectedServices.UnitConversion.TemperatureRequest dto);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUnitConversionService/ConvertTemperature", ReplyAction="http://tempuri.org/IUnitConversionService/ConvertTemperatureResponse")]
+        System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertTemperatureAsync(UnitConversionClient.TemperatureRequest dto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public interface IConversionServiceChannel : ConnectedServices.UnitConversion.IConversionService, System.ServiceModel.IClientChannel
+    public interface IUnitConversionServiceChannel : UnitConversionClient.IUnitConversionService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public partial class ConversionServiceClient : System.ServiceModel.ClientBase<ConnectedServices.UnitConversion.IConversionService>, ConnectedServices.UnitConversion.IConversionService
+    public partial class UnitConversionServiceClient : System.ServiceModel.ClientBase<UnitConversionClient.IUnitConversionService>, UnitConversionClient.IUnitConversionService
     {
         
         /// <summary>
@@ -312,50 +312,50 @@ namespace ConnectedServices.UnitConversion
         /// <param name="clientCredentials">The client credentials</param>
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
         
-        public ConversionServiceClient() : 
-                base(ConversionServiceClient.GetDefaultBinding(), ConversionServiceClient.GetDefaultEndpointAddress())
+        public UnitConversionServiceClient() : 
+                base(UnitConversionServiceClient.GetDefaultBinding(), UnitConversionServiceClient.GetDefaultEndpointAddress())
         {
-            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IConversionService.ToString();
+            this.Endpoint.Name = EndpointConfiguration.BasicHttpBinding_IUnitConversionService.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public ConversionServiceClient(EndpointConfiguration endpointConfiguration) : 
-                base(ConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), ConversionServiceClient.GetEndpointAddress(endpointConfiguration))
-        {
-            this.Endpoint.Name = endpointConfiguration.ToString();
-            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
-        }
-        
-        public ConversionServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
-                base(ConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
+        public UnitConversionServiceClient(EndpointConfiguration endpointConfiguration) : 
+                base(UnitConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), UnitConversionServiceClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public ConversionServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(ConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+        public UnitConversionServiceClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+                base(UnitConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
         
-        public ConversionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public UnitConversionServiceClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(UnitConversionServiceClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
+        {
+            this.Endpoint.Name = endpointConfiguration.ToString();
+            ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
+        }
+        
+        public UnitConversionServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress)
         {
         }
         
-        public System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertMassAsync(ConnectedServices.UnitConversion.MassRequest dto)
+        public System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertMassAsync(UnitConversionClient.MassRequest dto)
         {
             return base.Channel.ConvertMassAsync(dto);
         }
         
-        public System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertLengthAsync(ConnectedServices.UnitConversion.LengthRequest dto)
+        public System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertLengthAsync(UnitConversionClient.LengthRequest dto)
         {
             return base.Channel.ConvertLengthAsync(dto);
         }
         
-        public System.Threading.Tasks.Task<ConnectedServices.UnitConversion.ConversionResponse> ConvertTemperatureAsync(ConnectedServices.UnitConversion.TemperatureRequest dto)
+        public System.Threading.Tasks.Task<UnitConversionClient.UnitConversionResponse> ConvertTemperatureAsync(UnitConversionClient.TemperatureRequest dto)
         {
             return base.Channel.ConvertTemperatureAsync(dto);
         }
@@ -374,7 +374,7 @@ namespace ConnectedServices.UnitConversion
         
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IConversionService))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IUnitConversionService))
             {
                 System.ServiceModel.BasicHttpBinding result = new System.ServiceModel.BasicHttpBinding();
                 result.MaxBufferSize = int.MaxValue;
@@ -388,27 +388,27 @@ namespace ConnectedServices.UnitConversion
         
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
-            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IConversionService))
+            if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IUnitConversionService))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:5119/UnitConversionService");
+                return new System.ServiceModel.EndpointAddress("http://localhost:5119/UnitConversion");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
         
         private static System.ServiceModel.Channels.Binding GetDefaultBinding()
         {
-            return ConversionServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IConversionService);
+            return UnitConversionServiceClient.GetBindingForEndpoint(EndpointConfiguration.BasicHttpBinding_IUnitConversionService);
         }
         
         private static System.ServiceModel.EndpointAddress GetDefaultEndpointAddress()
         {
-            return ConversionServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IConversionService);
+            return UnitConversionServiceClient.GetEndpointAddress(EndpointConfiguration.BasicHttpBinding_IUnitConversionService);
         }
         
         public enum EndpointConfiguration
         {
             
-            BasicHttpBinding_IConversionService,
+            BasicHttpBinding_IUnitConversionService,
         }
     }
 }

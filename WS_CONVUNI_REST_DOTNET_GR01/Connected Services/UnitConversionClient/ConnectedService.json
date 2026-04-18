@@ -1,14 +1,14 @@
 {
   "ExtendedData": {
     "inputs": [
-      "http://localhost:5119/AuthService?wsdl"
+      "http://localhost:5119/UnitConversion?wsdl"
     ],
     "collectionTypes": [
       "System.Array",
       "System.Collections.Generic.Dictionary`2"
     ],
     "namespaceMappings": [
-      "*, ConnectedServices.Auth"
+      "*, UnitConversionClient"
     ],
     "references": [
       "Microsoft.AspNetCore.OpenApi, {Microsoft.AspNetCore.OpenApi, 10.0.5}",
