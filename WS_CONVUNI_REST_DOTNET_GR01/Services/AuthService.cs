@@ -4,11 +4,11 @@ namespace WS_CONVUNI_REST_DOTNET_GR01.Services;
 
 public class AuthService
 {
-    private readonly AuthClient.AuthServiceClient authServiceClient;
+    private readonly AuthClient.AuthServiceClient _client;
 
     public AuthService(AuthClient.AuthServiceClient authServiceClient)
     {
-        this.authServiceClient = authServiceClient;
+        _client = authServiceClient;
     }
 
     public async Task<LoginResponse> Login(LoginRequest dto)
@@ -19,7 +19,7 @@ public class AuthService
             Username = dto.Username,
         };
 
-        var response = await authServiceClient.LoginAsync(clientDto);
+        var response = await _client.LoginAsync(clientDto);
 
         return new LoginResponse()
         {

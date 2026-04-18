@@ -8,17 +8,17 @@ namespace WS_CONVUNI_REST_DOTNET_GR01.Controllers;
 [Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly AuthService service;
+    private readonly AuthService _service;
 
     public AuthController(AuthService service)
     {
-        this.service = service;
+        _service = service;
     }
 
     [HttpPost("Login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest dto)
     {
-        var result = await service.Login(dto);
+        var result = await _service.Login(dto);
         return Ok(result);
     }
 }

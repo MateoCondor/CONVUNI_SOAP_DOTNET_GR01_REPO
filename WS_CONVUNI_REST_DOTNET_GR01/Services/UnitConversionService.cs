@@ -5,11 +5,11 @@ namespace WS_CONVUNI_REST_DOTNET_GR01.Services;
 
 public class UnitConversionService
 {
-    private readonly UnitConversionClient.UnitConversionServiceClient conversionServiceClient;
+    private readonly UnitConversionClient.UnitConversionServiceClient _client;
 
     public UnitConversionService(UnitConversionClient.UnitConversionServiceClient conversionServiceClient)
     {
-        this.conversionServiceClient = conversionServiceClient;
+        _client = conversionServiceClient;
     }
 
     public async Task<UnitConversionResponse> ConvertMass(MassRequest dto)
@@ -21,7 +21,7 @@ public class UnitConversionService
             Value = dto.Value
         };
 
-        var response = await conversionServiceClient.ConvertMassAsync(clientDto);
+        var response = await _client.ConvertMassAsync(clientDto);
 
         return new UnitConversionResponse()
         {
@@ -39,7 +39,7 @@ public class UnitConversionService
             Value = dto.Value
         };
 
-        var response = await conversionServiceClient.ConvertLengthAsync(clientDto);
+        var response = await _client.ConvertLengthAsync(clientDto);
 
         return new UnitConversionResponse()
         {
@@ -57,7 +57,7 @@ public class UnitConversionService
             Value = dto.Value
         };
 
-        var response = await conversionServiceClient.ConvertTemperatureAsync(clientDto);
+        var response = await _client.ConvertTemperatureAsync(clientDto);
 
         return new UnitConversionResponse()
         {
