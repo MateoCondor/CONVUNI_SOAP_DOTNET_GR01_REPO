@@ -5,19 +5,19 @@ namespace WS_CONVUNI_REST_DOTNET_GR01.Services;
 
 public class ConversionService
 {
-    private readonly ConversionClient.ConversionServiceClient conversionServiceClient;
+    private readonly ConnectedServices.UnitConversion.ConversionServiceClient conversionServiceClient;
 
-    public ConversionService(ConversionClient.ConversionServiceClient conversionServiceClient)
+    public ConversionService(ConnectedServices.UnitConversion.ConversionServiceClient conversionServiceClient)
     {
         this.conversionServiceClient = conversionServiceClient;
     }
 
     public async Task<ConversionResponse> ConvertMass(MassRequest dto)
     {
-        var clientDto = new ConversionClient.MassRequest()
+        var clientDto = new ConnectedServices.UnitConversion.MassRequest()
         {
-            From = (ConversionClient.MassUnit)dto.From,
-            To = (ConversionClient.MassUnit)dto.To,
+            From = (ConnectedServices.UnitConversion.MassUnit)dto.From,
+            To = (ConnectedServices.UnitConversion.MassUnit)dto.To,
             Value = dto.Value
         };
 
@@ -32,10 +32,10 @@ public class ConversionService
 
     public async Task<ConversionResponse> ConvertLength(LengthRequest dto)
     {
-        var clientDto = new ConversionClient.LengthRequest()
+        var clientDto = new ConnectedServices.UnitConversion.LengthRequest()
         {
-            From = (ConversionClient.LengthUnit)dto.From,
-            To = (ConversionClient.LengthUnit)dto.To,
+            From = (ConnectedServices.UnitConversion.LengthUnit)dto.From,
+            To = (ConnectedServices.UnitConversion.LengthUnit)dto.To,
             Value = dto.Value
         };
 
@@ -50,10 +50,10 @@ public class ConversionService
 
     public async Task<ConversionResponse> ConvertTemperature(TemperatureRequest dto)
     {
-        var clientDto = new ConversionClient.TemperatureRequest()
+        var clientDto = new ConnectedServices.UnitConversion.TemperatureRequest()
         {
-            From = (ConversionClient.TemperatureUnit)dto.From,
-            To = (ConversionClient.TemperatureUnit)dto.To,
+            From = (ConnectedServices.UnitConversion.TemperatureUnit)dto.From,
+            To = (ConnectedServices.UnitConversion.TemperatureUnit)dto.To,
             Value = dto.Value
         };
 

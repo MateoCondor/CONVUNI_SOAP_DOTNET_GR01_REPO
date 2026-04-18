@@ -4,16 +4,16 @@ namespace WS_CONVUNI_REST_DOTNET_GR01.Services;
 
 public class AuthService
 {
-    private readonly AuthClient.AuthServiceClient authServiceClient;
+    private readonly ConnectedServices.Auth.AuthServiceClient authServiceClient;
 
-    public AuthService(AuthClient.AuthServiceClient authServiceClient)
+    public AuthService(ConnectedServices.Auth.AuthServiceClient authServiceClient)
     {
         this.authServiceClient = authServiceClient;
     }
 
     public async Task<LoginResponse> Login(LoginRequest dto)
     {
-        var clientDto = new AuthClient.LoginRequest()
+        var clientDto = new ConnectedServices.Auth.LoginRequest()
         {
             Password = dto.Password,
             Username = dto.Username,

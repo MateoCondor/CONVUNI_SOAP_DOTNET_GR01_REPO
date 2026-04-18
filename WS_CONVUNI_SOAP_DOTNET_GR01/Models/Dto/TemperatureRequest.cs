@@ -1,7 +1,7 @@
 using System.Runtime.Serialization;
-using WebServer.Enums;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Enums;
 
-namespace WebServer.Models.Dto;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto;
 
 [DataContract]
 public class TemperatureRequest

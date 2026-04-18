@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace WebServer.Models.Dto;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto;
 
 [DataContract]
 public class LoginRequest

@@ -1,7 +1,7 @@
-using WebServer.Enums;
-using WebServer.Interfaces;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Enums;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Interfaces;
 
-namespace WebServer.Models;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Models;
 
 public class MassConverter : IUnitConverter<MassUnit>
 {

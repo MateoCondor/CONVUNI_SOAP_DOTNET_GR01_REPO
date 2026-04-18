@@ -1,6 +1,6 @@
 using System.Runtime.Serialization;
 
-namespace WebServer.Enums;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Enums;
 
 [DataContract]
 public enum MassUnit

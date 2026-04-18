@@ -1,7 +1,7 @@
-using WebServer.Interfaces;
-using WebServer.Models.Dto;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Interfaces;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto;
 
-namespace WebServer.Services;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Services;
 
 public class AuthService : IAuthService
 {

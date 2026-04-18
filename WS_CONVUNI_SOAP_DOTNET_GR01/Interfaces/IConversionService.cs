@@ -1,7 +1,7 @@
 using CoreWCF;
-using WebServer.Models.Dto;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto;
 
-namespace WebServer.Interfaces;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Interfaces;
 
 [ServiceContract]
 public interface IConversionService

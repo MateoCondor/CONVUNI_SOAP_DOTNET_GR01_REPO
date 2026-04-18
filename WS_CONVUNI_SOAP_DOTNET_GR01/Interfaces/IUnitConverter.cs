@@ -1,4 +1,4 @@
-namespace WebServer.Interfaces;
+namespace WS_CONVUNI_SOAP_DOTNET_GR01.Interfaces;
 
 public interface IUnitConverter<T> where T : struct
 {

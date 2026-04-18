@@ -7,14 +7,14 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AuthClient
+namespace ConnectedServices.Auth
 {
     using System.Runtime.Serialization;
     
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LoginRequest", Namespace="http://schemas.datacontract.org/2004/07/WebServer.Models.Dto")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LoginRequest", Namespace="http://schemas.datacontract.org/2004/07/WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto")]
     public partial class LoginRequest : object
     {
         
@@ -51,7 +51,7 @@ namespace AuthClient
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LoginResponse", Namespace="http://schemas.datacontract.org/2004/07/WebServer.Models.Dto")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="LoginResponse", Namespace="http://schemas.datacontract.org/2004/07/WS_CONVUNI_SOAP_DOTNET_GR01.Models.Dto")]
     public partial class LoginResponse : object
     {
         
@@ -87,22 +87,22 @@ namespace AuthClient
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="AuthClient.IAuthService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ConnectedServices.Auth.IAuthService")]
     public interface IAuthService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAuthService/Login", ReplyAction="http://tempuri.org/IAuthService/LoginResponse")]
-        System.Threading.Tasks.Task<AuthClient.LoginResponse> LoginAsync(AuthClient.LoginRequest dto);
+        System.Threading.Tasks.Task<ConnectedServices.Auth.LoginResponse> LoginAsync(ConnectedServices.Auth.LoginRequest dto);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public interface IAuthServiceChannel : AuthClient.IAuthService, System.ServiceModel.IClientChannel
+    public interface IAuthServiceChannel : ConnectedServices.Auth.IAuthService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "8.0.0")]
-    public partial class AuthServiceClient : System.ServiceModel.ClientBase<AuthClient.IAuthService>, AuthClient.IAuthService
+    public partial class AuthServiceClient : System.ServiceModel.ClientBase<ConnectedServices.Auth.IAuthService>, ConnectedServices.Auth.IAuthService
     {
         
         /// <summary>
@@ -145,7 +145,7 @@ namespace AuthClient
         {
         }
         
-        public System.Threading.Tasks.Task<AuthClient.LoginResponse> LoginAsync(AuthClient.LoginRequest dto)
+        public System.Threading.Tasks.Task<ConnectedServices.Auth.LoginResponse> LoginAsync(ConnectedServices.Auth.LoginRequest dto)
         {
             return base.Channel.LoginAsync(dto);
         }

@@ -1,9 +1,9 @@
 using CoreWCF;
 using CoreWCF.Configuration;
-using WebServer.Enums;
-using WebServer.Interfaces;
-using WebServer.Models;
-using WebServer.Services;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Enums;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Interfaces;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Models;
+using WS_CONVUNI_SOAP_DOTNET_GR01.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
