@@ -1,0 +1,16 @@
+{
+  "ExtendedData": {
+    "inputs": [
+      "http://localhost:5119/Auth?wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, AuthClient"
+    ],
+    "targetFramework": "net10.0-windows",
+    "typeReuseMode": "All"
+  }
+}
