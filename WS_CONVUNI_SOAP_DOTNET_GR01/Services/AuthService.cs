@@ -6,11 +6,11 @@ namespace WS_CONVUNI_SOAP_DOTNET_GR01.Services;
 public class AuthService : IAuthService
 {
     private readonly string _username = "MONSTER";
-    private readonly string _passoword = "MONSTER9";
+    private readonly string _password = "MONSTER9";
 
     private bool VerifyCredentials(string username, string password)
     {
-        return _username == username && _passoword == password;
+        return _username == username && _password == password;
     }
 
     public LoginResponse Login(LoginRequest dto)
