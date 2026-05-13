@@ -28,8 +28,8 @@ type RestConversionResponse = {
 };
 
 const defaultBaseUrl = Platform.select({
-  android: 'http://192.168.100.159:5110/api',
-  default: 'http://localhost:5110/api',
+  android: 'http://10.40.24.51:5110/api',
+  default: 'http://10.40.24.51:5110/api',
 }) as string;
 
 const envBaseUrl = process.env.EXPO_PUBLIC_API_BASE_URL?.trim();

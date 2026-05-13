@@ -390,7 +390,7 @@ namespace UnitConversionClient
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IUnitConversionService))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:5119/UnitConversion");
+                return new System.ServiceModel.EndpointAddress("http://10.40.24.51:5119/UnitConversion");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }

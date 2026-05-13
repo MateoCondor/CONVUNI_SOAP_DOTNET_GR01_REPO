@@ -180,7 +180,7 @@ namespace AuthClient
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_IAuthService))
             {
-                return new System.ServiceModel.EndpointAddress("http://localhost:5119/Auth");
+                return new System.ServiceModel.EndpointAddress("http://10.40.24.51:5119/Auth");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
